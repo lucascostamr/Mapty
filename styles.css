@@ -1,0 +1,201 @@
+body {
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.div-block {
+    display: inline-block;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    text-align: center;
+}
+
+#div-right-side {
+    right: 0;
+    width: 70%;
+    background-color: #DDF2FD;
+}
+
+#div-left-side {
+    left: 0;
+    width: 30%;
+    background-color: #427D9D;
+}
+
+.input-coords {
+    text-align: right;
+    display: inline-block;
+    padding: 1rem;
+    background-color: #164863;
+    border-radius: 8px;
+    transition: all 0.5s, transform 1ms;
+}
+
+.input-field {
+    width: 4rem;
+    margin: 0 0.5rem 0.5rem 0;
+    border-radius: 2px;
+    border: none;
+    outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}
+
+.input-coords-left {
+    display: inline-block;
+    padding-right: 1rem;
+}
+
+.input-coords-right {
+    display: inline-block;
+}
+
+.input-label{
+    padding-right: 10px;
+    color: #DDF2FD;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.title {
+    font-family: sans-serif;
+    color: #DDF2FD;
+}
+
+.div-title {
+    padding: 2rem;
+}
+
+.location-icon {
+    max-width: 60px;
+    max-height: 60px;
+    float: left;
+    position: relative;
+    left: 33%;
+}
+
+.modal-activities {
+    margin: 0.5rem;
+    display: inline-block;
+    position: relative;
+    background-color: #164863;
+    border-radius: 5px;
+    border-left: 5px solid #00DFA2;
+    min-width: 500px;
+}
+
+.activities-content {
+    text-align: left;
+    padding: 0 1rem 1rem 2rem;
+    font-family: sans-serif;
+    color: #DDF2FD;
+}
+
+.activities-content .title{
+    font-size: 15px;
+}
+
+.activitie-span {
+    font-weight: bold;
+    font-size: 12px;
+    padding: 2px;
+}
+
+.activities-content .unit {
+    font-size: 10px;
+    padding-right: 2rem;
+}
+
+#map {
+    height: 100%;
+}
+
+.map-popup {
+    background-color: #164863;
+    border-radius: 10px;
+}
+
+.running-border {
+    border-left: 5px solid #00DFA2;
+}
+
+.cycling-border {
+    border-left: 5px solid #F05941;
+}
+
+.leaflet-popup-content-wrapper{
+    background-color: #164863 !important;
+    font-family: sans-serif !important;
+    color: #DDF2FD !important;
+    font-weight: bold !important;
+}
+
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.input-hidden {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    transform: translateY(-30rem);
+}
+
+.list-workouts {
+    list-style: none;
+    padding-left: 0;
+}
+
+.btn {
+    -webkit-appearance: none;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    background-color:#164863;
+    color: #DDF2FD;
+}
+
+.btn-close {
+    color: rgb(105, 104, 104);
+    position: absolute;
+    text-decoration: none;
+    right: 1rem;
+    top: 0.5rem;
+}
+
+.filter-title {
+    background-color: #164863;
+    color: #DDF2FD;
+    padding: 5px;
+    border-radius: 2px;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+#div-filter {
+    margin: 1rem;
+    display: inline-block;
+}
+
+.btn-remove-all {
+    background-color: red;
+    font-family: sans-serif;
+    font-weight: bold;
+    padding: 2px;
+}
+
+.div-remove-all {
+    text-align: right;
+    margin-right: 2rem;
+}

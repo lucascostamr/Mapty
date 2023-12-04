@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Mapty App</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
+
+    <!-- LeaFlet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+    <!-- google fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <script defer src="./index.js"></script>
+</head>
+<body>
+    <section id="sec__1">
+        <div class="div-block" id="div-left-side">
+            <div class="div-title">
+                <img src="https://cdn-icons-png.flaticon.com/512/4284/4284088.png" alt="" class="location-icon">
+                <h1 class="title">Mapty App</h1>
+            </div>
+            <div class="input-coords input-hidden">
+                <form class="input-coords-form">
+                    <div class="input-coords-left">
+                        <label class="input-label" for="type-dropdown">Type</label>
+                        <select class="input-field" name="type-dropdown" id="type-dropdown">
+                            <option value="running">Running</option>
+                            <option value="cycling">Cycling</option>
+                        </select>
+                        <br>
+                        <label class="input-label" for="duration-input">Duration</label>
+                        <input class="input-field" type="number" id="duration-input">
+                    </div>
+                    <div class="input-coords-right">
+                        <label class="input-label" for="distance-input">Distance</label>
+                        <input class="input-field" type="number" id="distance-input">
+                        <br>
+                        <label class="input-label input-hidden" for="elev-gain-input">Elev Gain</label>
+                        <input class="input-field input-hidden" type="number" id="elev-gain-input">
+
+                        <label class="input-label" id="cadence-label" for="elev-gain-input">Cadence</label>
+                        <input class="input-field" type="number" id="cadence-input">
+                    </div>
+                    <input type="submit" class="hidden">
+                </form>
+            </div>
+
+            <div class="hidden" id="div-filter">
+                <span class="filter-title">Filter by</span>
+                <select name="filters" id="filter">
+                    <option value="">Select</option>
+                    <option value="date">Date</option>
+                    <option value="distance">Distance</option>
+                    <option value="duration">Duration</option>
+                </select>
+            </div>
+
+            <div class="div-remove-all hidden">
+                <a href="" title="Remove All Workouts"><span class="btn btn-remove-all material-symbols-outlined">delete</span></a>
+            </div>
+            <ul class="list-workouts">
+                <!-- list of workouts -->
+            </ul>
+        </div>
+    </section>
+    <section id="sec__2">
+        <div class="div-block" id="div-right-side">
+            <div id="map"></div>
+        </div>
+    </section>
+</body>
+</html>
